@@ -21,33 +21,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Configuración de ImageView para animación
+        // Configuración de ImageView para animación le hace el cuchau
         ImageView imageView = findViewById(R.id.imageView);
 
-        // Configuración del reproductor de audio
+        // Configuración del empotrador de audio
         mediaPlayer = MediaPlayer.create(this, R.raw.audio);
 
-        // Configuración del reproductor de video
+        // Configuración del empotrador de video
         videoView = findViewById(R.id.myVideoView);
         Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.musicavideo);
         videoView.setVideoURI(videoUri);
 
-        // Botón de reproducir audio
+        // Botón de reproducir warifaifa audio
         Button playAudioButton = findViewById(R.id.playAudioButton);
         playAudioButton.setOnClickListener(v -> mediaPlayer.start());
 
-        // Botón de reproducir video
+        // Botón de reproducir warifaifa video
         Button playVideoButton = findViewById(R.id.playVideoButton);
         playVideoButton.setOnClickListener(v -> videoView.start());
 
-        // Botón de animación de imagen
+        // Botón de animación de imagen chuchau
         Button animateButton = findViewById(R.id.animateButton);
         animateButton.setOnClickListener(v -> {
             Animation fadeInAnimation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in);
             imageView.startAnimation(fadeInAnimation);
         });
 
-        // Botón para pausar tanto el audio como el video
+        // Botón para pausar la warifaifa
         Button pauseButton = findViewById(R.id.pauseButton);
         pauseButton.setOnClickListener(v -> {
             if (mediaPlayer.isPlaying()) {
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Botón para reanudar tanto el audio como el video
+        // Botón para reanudar la warifaifa
         Button playButton = findViewById(R.id.playButton);
         playButton.setOnClickListener(v -> {
             if (!mediaPlayer.isPlaying()) {
